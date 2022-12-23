@@ -1,0 +1,44 @@
+@import '../../styles/variables.scss';
+.all {
+
+    cursor: pointer;
+    &:hover > .all-list  {
+        display: block;
+    }
+    .all-list {
+        box-shadow: -1px 1px 1px #4545;
+        width: calc(100% - 1px);
+        display: none;
+        p {
+           &:hover {
+                color:$blue-color;
+           }
+        }
+    }
+}
+
+
+.bottomHeader-list {
+    li {
+
+        &:first-of-type {
+            box-shadow: 1px 0 1px #4545;
+            &:hover {
+                box-shadow:1px 0 1px #4545,
+                 -1px 0 1px #4545;
+            }
+        }
+        &:hover {
+            box-shadow: 1px 0 1px #4545,
+            -1px 0 1px #4545 ;
+        }
+        cursor: pointer;
+        font-size: 14px;
+        height: 100%;
+        padding: 10px 25px;
+        &:hover {
+
+           
+        }
+    }   
+}

@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+.header {
+    background-color: $yellow-color;
+    p {
+        margin: 0;
+    }
+    .noon-logo {
+        width: 100px;
+        height: 25px;
+        @media (max-width : 767px) {
+            width: 100%;
+        }
+    }
+    .arrived_to {
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+    .form-input {
+        border: none;
+        height: 40px;
+    }
+    .form-input:focus-visible {
+        outline: none;
+    }
+    svg {
+        margin-top:3px;
+    }
+}
