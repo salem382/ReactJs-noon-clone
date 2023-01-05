@@ -1,4 +1,5 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
 .header {
     background-color: $yellow-color;
     p {
@@ -27,5 +28,11 @@
     }
     svg {
         margin-top:3px;
+    }
+    .uperHeader-log-in {
+       @include transition(0.2s);
+        &:hover {
+            color: rgba($color: #000000, $alpha: 0.5);
+        }
     }
 }

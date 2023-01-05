@@ -1,4 +1,5 @@
 import Header from "../../components/header/Header";
+import Offers from "../../components/offers/Offers";
 /*
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,6 +13,7 @@ const Home = () => {
     return (
         <>
             <Header />
+            <Offers />
         </>
     )
 }

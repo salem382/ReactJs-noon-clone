@@ -1,0 +1,115 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixin.scss';
+.slider {
+    overflow: hidden;
+    .arrows button {
+        border: none;
+        width: 35px;
+        line-height: 40px;
+        height: 40px;
+    }
+    .swiper-horizontal>
+    .swiper-pagination-bullets, 
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 10px;
+        width: 500px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .arrows {
+        height: 213px;
+    }
+}
+.swiper-pagination-bullet-active { 
+  background-color : $yellow-color !important;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    background-color:rgb(226, 229, 241);
+    opacity: 1 !important;
+    width: 25px;
+    height: 4px;
+    border-radius: 2px !important;
+}
+
+.image-swiper-button-prev,
+.image-swiper-button-next {
+    width: 100px;
+    height: 100%;
+    overflow: hidden;
+    &:hover > .svg-s {
+        transform: scaleX(3);
+        & > path {
+            fill:rgba(255,255,255,1)
+        }
+    }
+    .svg-s {
+        position: absolute;
+        top: -140px;
+        transition:$transition;
+        & > path {
+            transition:$transition;
+        }
+    }
+}
+.image-swiper-button-next {
+    right: 0;
+    &:hover {
+        .next-btn {
+            left: 30%;
+            background-color: transparent;
+        }    
+    }
+    .next-btn {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10%;
+        background-color: rgba(255,255,255,.4);
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 26px;
+        }
+
+    }
+    .svg-s {
+        right:-20px;
+    }
+}
+.image-swiper-button-prev {
+    left: 0;
+    &:hover {
+        .prev-btn {
+            right: 30%;
+            background-color: transparent;
+        }    
+    }
+    .prev-btn {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10%;
+        background-color: rgba(255,255,255,.4);
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 26px;
+        }
+
+    }
+    .svg-s {
+        left:-20px;
+    }
+}

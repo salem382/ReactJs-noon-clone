@@ -14,8 +14,8 @@ const BottomHeader = () => {
                         <span>جميع الفئات</span>
                         <FontAwesomeIcon icon={faCaretDown} />
                     </div>
-                    <div className='all-list position-absolute px-2 px-md-5 py-2 pt-4 border-start'
-                     style={{height:'150px'}}>
+                    <div className='all-list bg-white position-absolute px-2 px-md-5 py-2 pt-4 border-start'
+                     style={{height:'150px', zIndex:999}}>
                         <p>الألكترونيات</p>
                         <p>موبيلات</p>
                         <p>رجالية</p>
@@ -23,7 +23,7 @@ const BottomHeader = () => {
                 </div>
 
 
-                <ul className="bottomHeader-list list-unstyled d-flex p-0 fw-bold">
+                <ul className="bottomHeader-list m-0 list-unstyled d-flex p-0 fw-bold">
                     <li>الألكترونيات</li>
                     <li>موبيلات</li>
                     <li>رجالية</li>

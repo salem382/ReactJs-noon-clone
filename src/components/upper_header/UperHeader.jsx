@@ -35,7 +35,7 @@ const UperHeader = () => {
                     </Col>
                     <Col className='col-md-4 col-6'>
                         <div className='d-flex justify-content-between align-items-center'>
-                            <div onClick={() => setOpenSignFun(true)} className='d-flex justify-content-between'>
+                            <div onClick={() => setOpenSignFun(true)} className='d-flex justify-content-between uperHeader-log-in'>
                                 <p className='ms-sm-3 ms-1'
                                 style={{cursor:'pointer'}}>تسجيل الدخول</p>
                                 <FontAwesomeIcon icon={faUser} />
