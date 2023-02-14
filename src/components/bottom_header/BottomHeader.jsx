@@ -1,13 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import {Container} from 'react-bootstrap';
 import './Bottom.scss';
+import { useLocation } from 'react-router-dom';
+
 
 const BottomHeader = () => {
 
+    const location = useLocation();
 
     return (
-        <div className='d-flex align-items-start'>
+        <div className='align-items-start' style={{display:location.pathname === `/personal` ? 'none' : 'flex'}}>
             
                 <div className="all pt-2 w-25 position-relative">
                     <div className='d-flex fw-bold align-items-center  justify-content-around text-primary'>

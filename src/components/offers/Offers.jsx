@@ -26,7 +26,7 @@ const Slider = () => {
 
     return (
        
-        <section className='position-relative slider'>
+        <section className='position-relative offers slider'>
         <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
@@ -45,7 +45,7 @@ const Slider = () => {
         </Swiper>
         <div style={{zIndex:'99'}} className='arrows d-lg-block w-100 position-absolute start-50 top-50 translate-middle'>
             <div onMouseEnter={() => setSingleArrowLeft(false)} onMouseLeave ={() => setSingleArrowLeft(true)}
-             className='image-swiper-button-prev  position-absolute start-0'>
+             className='image-swiper-button-prev  position-absolute  '>
                 <svg width="44" height="502" viewBox="0 0 44 502" fill="none" xmlns="http://www.w3.org/2000/svg" className="svg-left svg-s sc-iWajrY jVArlI">
                     <path className="wave" d="M0.999973 501C32.9999 301.5 42.9999 308 42.9999 252.5C42.9999 197 29.4999 189 1.00002 0.999996L0.999973 501Z" fill="rgba(255,255,255,.4)">
 
@@ -59,7 +59,7 @@ const Slider = () => {
             </div>
 
             <div onMouseEnter={() => setSingleArrowRight(false)} onMouseLeave ={() => setSingleArrowRight(true)}
-             className='image-swiper-button-next  position-absolute end-0'>
+             className='image-swiper-button-next  position-absolute'>
                 <svg width="44" height="501" viewBox="0 0 44 501" fill="none" xmlns="http://www.w3.org/2000/svg" className="svg-right svg-s sc-bTMaZy jyTFVw">
                     <path className="wave"
                         d="M42.9999 0.5C11 200 1 193.5 1 249C1 304.5 14.5 312.5 42.9999 500.5V0.5Z" 
@@ -74,6 +74,7 @@ const Slider = () => {
             </div>
             
         </div>
+
         </section>    
        
     )

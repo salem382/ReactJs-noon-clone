@@ -4,13 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import {faUser} from '@fortawesome/free-regular-svg-icons';
 import './uperheader.scss';
-import Sign from '../sign/Sign';
-import { useState } from 'react';
+import Sign from '../singnComponent/sign/Sign';
+import { useDispatch } from 'react-redux';
+import {setOpenSign} from '../../store/showSignSlice';
+import { Link } from 'react-router-dom';
 
 const UperHeader = () => {
 
-    const [openSign, setOpenSign] = useState(false);
-    const setOpenSignFun = (param) => {setOpenSign(param)};
+    const dispatch = useDispatch();
 
     return (
         <header className='header py-2'>
@@ -18,7 +19,7 @@ const UperHeader = () => {
                 <Row className='align-items-center'>
                     <Col className='col-md-4 col-2'>
                         <div className='d-flex justify-content-around align-items-center'>
-                            <img src='./images/logo.svg' className='ms-auto noon-logo' alt='logo'/>
+                            <Link to={'/'}><img src='./images/logo.svg' className='ms-auto noon-logo' alt='logo'/></Link>
                             <div className='d-md-flex d-none align-items-center arrived_to'>
                                 <img src='./images/Egypt.svg' alt='logo'/>
                                 <p className='mx-2'>تسليم الي  <br />
@@ -35,7 +36,7 @@ const UperHeader = () => {
                     </Col>
                     <Col className='col-md-4 col-6'>
                         <div className='d-flex justify-content-between align-items-center'>
-                            <div onClick={() => setOpenSignFun(true)} className='d-flex justify-content-between uperHeader-log-in'>
+                            <div onClick={() => dispatch(setOpenSign(true))} className='d-flex justify-content-between uperHeader-log-in'>
                                 <p className='ms-sm-3 ms-1'
                                 style={{cursor:'pointer'}}>تسجيل الدخول</p>
                                 <FontAwesomeIcon icon={faUser} />
@@ -48,7 +49,7 @@ const UperHeader = () => {
                     </Col>
                 </Row>
             </Container>
-            <Sign openSign = {openSign} setOpenSignFun= {setOpenSignFun} />
+            <Sign/>
         </header>
     )
 }

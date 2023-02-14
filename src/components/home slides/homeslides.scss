@@ -1,0 +1,16 @@
+.siper02 {
+    .swiper-button-next, .swiper-button-prev {
+        background-color: #E0E0E0;
+        box-shadow: 3px 3px 10px #ccc, -3px -3px 10px #ccc;
+        &::after, &::before {
+            background-color: #000;
+        }
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    &::after {
+        content: "" !important;
+    }
+}
