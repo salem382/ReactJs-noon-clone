@@ -1,0 +1,20 @@
+.active-item {
+    border: 1px solid #777;
+    text-decoration: none;
+    color: #777;
+    display: block;
+    width: 100%;
+    &:hover {
+        color: #777;
+    }
+}
+.unactive-item {
+    border: 1px solid transparent; 
+    text-decoration: none;
+    color: #777;  
+    display: block;
+    width: 100%;
+    &:hover {
+        color: #777;
+    }
+}

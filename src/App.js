@@ -10,6 +10,12 @@ import PersonalPage from './pages/personalPage/PersonalPage';
 import { useDispatch } from 'react-redux';
 import {setOpenSidebar, setScreenSize} from './store/sidebarSlice';
 import { useEffect, useState } from 'react';
+import AdminIndex from './pages/AdminIndex/AdminIndex';
+import MainPage from './pages/AdminIndex/mainPage/MainPage';
+import Electronic from './pages/AdminIndex/electronic/Electronic';
+import Phones from './pages/AdminIndex/phones/Phones';
+import Mens from './pages/AdminIndex/mens/Mens';
+
 
 
 function App() {
@@ -52,6 +58,13 @@ function App() {
           <Route path='/cart' element={<CartPage />}/>
           <Route path='/favorite' element={<FavPage />}/>
           <Route path='/personal' element={<PersonalPage />}/>
+          <Route path='/admin'>
+              <Route index  element={<AdminIndex />}/>
+              <Route path='main'  element={<MainPage />}/>
+              <Route path='electronic'  element={<Electronic />}/>
+              <Route path='phones'  element={<Phones />}/>
+              <Route path='mens'  element={<Mens />}/>
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

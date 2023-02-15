@@ -40,7 +40,7 @@ const SignUp = ({setOpenSignUp}) => {
                         </li>
                         <li>
                             <p className="haf-color mt-4">أسم العائلة</p>
-                            <input o name='lastName' className="border-0 border-bottom w-100" type={'text'}/>
+                            <input name='lastName' className="border-0 border-bottom w-100" type={'text'}/>
                         </li>
                            
                     </ul>
