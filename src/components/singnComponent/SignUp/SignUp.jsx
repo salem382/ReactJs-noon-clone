@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import {setOpenSign} from '../../../store/showSignSlice';
 
 
+
 const SignUp = ({setOpenSignUp}) => {
 
     const dispatch = useDispatch();
@@ -17,34 +18,34 @@ const SignUp = ({setOpenSignUp}) => {
                          style={{cursor:'pointer'}}/>
                     </div>
                     <h2 className="text-center fw-bold fs-4">
-                        انشاء حسابك
+                         Create an account
                     </h2>
                     <p className="text-center haf-color"> 
-                    <span>هل لديك حساب بالفعل ؟</span>
-                    <span className='text-primary' style={{cursor:'pointer'}} onClick={() => setOpenSignUp(false)}>
-                        تسجيل الدخول    
+                    <span>Already have an account?</span>
+                    <span className='text-primary mx-2' style={{cursor:'pointer'}} onClick={() => setOpenSignUp(false)}>
+                        Sign In   
                     </span>
                     </p>
                     <ul className="sign-list list-unstyled p-0 mt-4 px-3">
                         <li>
-                            <p className="haf-color">البريد الألكتروني</p>
+                            <p className="haf-color">Email</p>
                             <input name='email' className="border-0 border-bottom w-100" type={'text'}/>
                         </li>
                         <li>
-                            <p className="haf-color mt-4">كلمة السر</p>
+                            <p className="haf-color mt-4">Password</p>
                             <input  name='password' className="border-0 border-bottom w-100" type={'text'}/>
                         </li>
                         <li>
-                        <p className="haf-color mt-4">الأسم الأول</p>
+                        <p className="haf-color mt-4">First Name</p>
                         <input className="border-0 border-bottom w-100" name='firstName' type={'text'}/>
                         </li>
                         <li>
-                            <p className="haf-color mt-4">أسم العائلة</p>
+                            <p className="haf-color mt-4">Last Name</p>
                             <input name='lastName' className="border-0 border-bottom w-100" type={'text'}/>
                         </li>
                            
                     </ul>
-                    <button onClick={(e) => e.preventDefault()} className="btn fw-bold w-100 text-center d-block border-top pt-3 mt-5 text-primary">انشاء حسابك</button>
+                    <button onClick={(e) => e.preventDefault()} className="btn fw-bold w-100 text-center d-block border-top pt-3 mt-5 text-primary">CREATE ACCOUNT</button>
                 </form>
     )
 }

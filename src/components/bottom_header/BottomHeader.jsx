@@ -10,25 +10,61 @@ const BottomHeader = () => {
 
     return (
         <div className='align-items-start' style={{display:location.pathname === `/personal` ? 'none' : 'flex'}}>
-            
-                <div className="all pt-2 w-25 position-relative">
-                    <div className='d-flex fw-bold align-items-center  justify-content-around text-primary'>
-                        <span>جميع الفئات</span>
+                <div className="all pt-2 w-25 position-relative d-none d-md-block">
+                    <div className='d-flex fw-bold align-items-center justify-content-around text-primary'>
+                        <span>ALL CATEGORIES</span>
                         <FontAwesomeIcon icon={faCaretDown} />
                     </div>
-                    <div className='all-list bg-white position-absolute px-2 px-md-5 py-2 pt-4 border-start'
-                     style={{height:'150px', zIndex:999}}>
-                        <p>الألكترونيات</p>
-                        <p>موبيلات</p>
-                        <p>رجالية</p>
+                    <div className='all-list position-absolute px-2 px-md-5 py-2 pt-4 border-start bg-white'
+                     style={{zIndex:999, width:"150%"}}>
+                        <div className='d-flex justify-content-between'>
+                                <div style={{width:"14px", width:"35%"}}>
+                                    <h6>category</h6>
+                                    <span>ELECTORNICS</span>
+                                    <span>MOBILES</span>
+                                    <span>MEN</span>
+                                    <span>ELECTORNICS</span>
+                                    <span>MOBILES</span>
+                                    <span>MEN</span>
+                                    <span>ELECTORNICS</span>
+                                    <span>MOBILES</span>
+                                    <span>MEN</span>
+                                    <span>ELECTORNICS</span>
+                                    <span>MOBILES</span>
+                                    <span>MEN</span>
+                                </div>
+                                <div style={{width:"65%"}}>
+                                <p className='text-center'>active category</p>
+                                <div className='d-flex justify-content-between'>
+                                    <div>
+                                        <h6>sub category</h6>
+                                        <span>MEN</span>
+                                        <span>ELECTORNICS</span>
+                                        <span>MOBILES</span>
+                                        <span>MEN</span>
+                                        <span>ELECTORNICS</span>
+                                        <span>MOBILES</span>
+                                        <span>MEN</span>
+                                    </div>
+                                    <div>
+                                        <h6>brands</h6>
+                                        <span>MEN</span>
+                                        <span>ELECTORNICS</span>
+                                        <span>MOBILES</span>
+                                        <span>MEN</span>
+                                        <span>ELECTORNICS</span>
+                                        <span>MOBILES</span>
+                                        <span>MEN</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-
                 <ul className="bottomHeader-list m-0 list-unstyled d-flex p-0 fw-bold">
-                    <li>الألكترونيات</li>
-                    <li>موبيلات</li>
-                    <li>رجالية</li>
+                    <li>ELECTORNICS</li>
+                    <li>MOBILES</li>
+                    <li>MEN</li>
                 </ul>
             
         </div>

@@ -20,13 +20,13 @@ const Sidebar = () => {
             onClick = {() =>dispatch(setOpenSidebar(false))}
             ></div>
             <div style={
-            {right:openSidebar ? '0' :  "-300px", width:"300px", top:screeSize < 992 ?'0' :"63px",minHeight:"100vh", zIndex:'100', transition:"all .3s ease-in-out"}} 
+            {left:openSidebar ? '0' :  "-300px", width:"300px", top:screeSize < 992 ?'0' :"63px",minHeight:"100vh", zIndex:'100', transition:"all .3s ease-in-out"}} 
             className='sidebar border position-absolute bg-white'>
 
               <ul className="list-unstyled">
                 <li className="my-3 d-flex align-items-center" role={"button"}>
                     <span style={{width:"50px", height:"40px", lineHeight:"40px"}}
-                     className='rounded-circle d-block text-center border'>
+                     className='rounded-circle d-block text-center border '>
                         <FontAwesomeIcon className="fs-6 " icon={faQrcode} style={{color:"#FEEE00"}}/>
                     </span>
                     <span className="mx-3 fs-5" style={{color:"#999"}}>كود QR</span>

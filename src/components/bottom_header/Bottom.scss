@@ -9,10 +9,12 @@
         box-shadow: -1px 1px 1px #4545;
         width: calc(100% - 1px);
         display: none;
-        p {
-           &:hover {
+        span {
+            font-size: 14px;
+            display: block;
+            &:hover {
                 color:$blue-color;
-           }
+            }
         }
     }
 }
@@ -22,7 +24,7 @@
     li {
 
         &:first-of-type {
-            box-shadow: 1px 0 1px #4545;
+            box-shadow: -1px 0 1px #4545;
             &:hover {
                 box-shadow:1px 0 1px #4545,
                  -1px 0 1px #4545;
@@ -31,14 +33,13 @@
         &:hover {
             box-shadow: 1px 0 1px #4545,
             -1px 0 1px #4545 ;
+            & > .cat-child {
+                display: block;
+            }
         }
         cursor: pointer;
         font-size: 14px;
         height: 100%;
         padding: 10px 25px;
-        &:hover {
-
-           
-        }
     }   
 }

@@ -18,6 +18,7 @@
         transform: translateX(-50%);
     }
     .arrows {
+        top: 110px !important;
         height: 213px;
     }
 }
@@ -84,7 +85,8 @@
   
       }
       .svg-s {
-          right:-20px;
+        right: -12px;
+         top: -120px;
       }
   }
   .image-swiper-button-prev {
@@ -114,7 +116,8 @@
   
       }
       .svg-s {
-          left:-20px;
+        left: -12px;
+         top: -120px;
       }
   }
 }

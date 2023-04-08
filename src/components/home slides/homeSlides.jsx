@@ -7,15 +7,17 @@ import './homeslides.scss';
 import ProductComponent from '../productComponent/ProductComponent';
 import { faChevronRight, faChevronLeft} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Container } from 'react-bootstrap';
 
 
 
-const HomeSlides = () => {
+const HomeSlides = ({next, prev}) => {
 
     return (
+        <Container fluid>
         <section className='position-relative'>
         <h5 className="mt-5 me-4 mb-3" >Head</h5>
-        <div className="item-slide mt-2">
+        <div className="item-slide mt-2 swiper-container">
               <Swiper
             breakpoints={{
                 0: {
@@ -30,8 +32,8 @@ const HomeSlides = () => {
               }}
             modules={[Navigation]}
             navigation={{
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl:`.${next}`,
+                prevEl:`.${prev}`,
                 disabledClass: "swiper-button-disabled"
                 
             }}
@@ -71,14 +73,14 @@ const HomeSlides = () => {
 
         <div style={{zIndex:'99'}} className='arrows d-lg-block position-absolute w-100 top-50 translate-middle-y'>
             <div
-            className='swiper-button-prev  position-absolute rounded-circle bg-white'
+            className={'position-absolute rounded-circle bg-white swiper-button-prev ' + prev}
                 style={{width:"30px", height:"30px", boxShadow:"0 0 3px #777", color:"#777"}}
             >
                 <FontAwesomeIcon  icon={faChevronLeft} className='fs-5'/> 
             </div>
 
             <div 
-            className='swiper-button-next  position-absolute border  rounded-circle bg-white'
+            className={'position-absolute border  rounded-circle bg-white swiper-button-next ' + next}
             style={{width:"30px", height:"30px", boxShadow:"0 0 3px #777", color:"#777"}}>
                 <FontAwesomeIcon  icon={faChevronRight} className='fs-5'/> 
             </div>
@@ -86,6 +88,7 @@ const HomeSlides = () => {
         
         </div>
         </section>
+        </Container>
     )
 }
 

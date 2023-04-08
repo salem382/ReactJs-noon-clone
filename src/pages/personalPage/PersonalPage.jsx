@@ -15,7 +15,7 @@ const PersonalPage = () => {
     return (
         <section>
             <Header />
-            <FontAwesomeIcon onClick={() => dispatch(setOpenSidebar(true))} role={"button"} icon={faBars} className='fs-4' style={{marginTop:"15px", marginRight:"15px"}}/>
+            <FontAwesomeIcon onClick={() => dispatch(setOpenSidebar(true))} role={"button"} icon={faBars} className='fs-4' style={{marginTop:"15px", marginLeft:"15px"}}/>
             <Sidebar />
             <Wrapper>
                 <Content />

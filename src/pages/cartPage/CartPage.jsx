@@ -2,6 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import CartComponents from "../../components/cartComponents/CartComponents";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
+import { Link } from "react-router-dom";
 
 
 const CartPage = () => {
@@ -18,6 +19,10 @@ const CartPage = () => {
                     </Col>
                     <Col lg={5} className='col-12'>
                     <div>
+                        <div className="d-flex w-75 my-2">
+                            <input className="form-control me-2" placeholder="Coupon Code"/>
+                            <button className="btn btn-primary">Apply</button>
+                        </div>
                        <div className="d-flex align-items-center">
                             <p className="fw-bold fs-4">المجموع الكلي </p>
                             <p className="mx-3" style={{color:"#777"}}>(يشمل ضريبة القيمة المضافة)</p>
@@ -29,6 +34,11 @@ const CartPage = () => {
                     </div>
                     </Col>
                 </Row>
+                <div>
+                    <Link to={'/'}>
+                    <button className="btn btn-outline-primary">Continue Shoping</button>
+                    </Link>
+                </div>
             </Container>
             <Footer />
         </>
